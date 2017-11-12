@@ -1,0 +1,10 @@
+{
+  "generator-sppp": {
+    "app.name": "reception",
+    "sppp.version": "2.1.8",
+    "app.description": "",
+    "app.author": "Denis",
+    "conf.spFolder": "_catalogs/masterpage/reception",
+    "conf.distFolder": "./dist"
+  }
+}

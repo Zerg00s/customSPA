@@ -1,0 +1,21 @@
+<ng-form name='form'>
+    <div id='css-table'>
+        <div class="col background-white square square-left" style="padding:20px 50px 20px 50px">
+            <p class='column-heading'>Enter your email</p>
+            <label for="Email" class='input-label'>Email</label>
+            <input ng-required='true' autofocus  type="email" name='Email' id='Email' ng-model='signOut.Email' class='form-control input input-large'>
+            <p class='form-comment'>You can sign out as a group using a single email</p>
+
+            <div ng-show='signOut.errorMessage' class="error-message success">
+                {{signOut.errorMessage}}
+            </div>
+            
+        </div>
+        <div class="col background-blue square square-right vertical-align">
+                <button type="button" ng-click='signOut.trySignOut()' class='btn btn-primary btn-center btn-kiosk btn-kiosk-blue btn-kiosk-large'>Submit <i class='fa fa-paper-plane'></i></button>
+        </div>
+    </div>
+
+    <div class='col-1 button-submit-row'>
+    </div> 
+</ng-form>

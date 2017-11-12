@@ -1,0 +1,16 @@
+<div class="panel panel-primary inform-modal">
+    <!--<div class="panel-heading">Thank you</div>-->
+    <div class="panel-body">
+        <!--{{modals.message}}-->
+        <div class='button-centered vertical-align flex-container' >
+            <i class="fa margin-top-20" ng-class="{'fa-check-circle-o': !isError, 'fa-warning': isError }"></i>
+            <p class='modal-message'>{{message}}</p>
+            <button 
+            class='btn btn-primary btn-kiosk ok-button btn-kiosk-blue' 
+            type='button'  
+            style="align-self: center;"
+            ng-click='ok()'>Close <i class="fa fa-arrow-right"></i></button>
+            <!--<button class='btn' type='button' ng-click='cancel()'>Close</button>--> 
+        </div>
+    </div>
+</div>

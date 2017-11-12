@@ -1,0 +1,35 @@
+<ng-form name='form'>
+    <div id='css-table'>
+        <div class="col background-white square square-left" style="padding:20px 50px 20px 50px">
+            <p class='column-heading'>Tell us about yourself</p>
+
+            <label for="FullName" class='input-label'>Full name(s)</label>
+            <input type="text" ng-required='true' name='FullName' id='FullName' ng-model='signIn.FullName' class='form-control input input-large'
+                autofocus>
+                <p class='form-comment'>List all visitors names </p>
+                <label for="Email" class='input-label'>Email</label>
+                <input type="email" ng-required='true' name='Email' id='Email' ng-model='signIn.Email' class='form-control input input-large'>
+                <p  class='form-comment'>Type in a single email </p>
+                <label for="Reason" class='input-label'>Reason for visit</label>
+
+                <select name="Reason" id="Reason" ng-required='true' class='form-control input input-large' ng-model='signIn.Reason' ng-options="reason for reason in signIn.Reasons">
+            </select>
+        </div> 
+        <div class="col background-blue users-container square square-right">
+            <p class='column-heading color-yellow'>Select the person you're here to visit</p>
+            <p class='column-heading color-red'><i class="fa fa-arrow-down"></i> You need to select a host first <i class="fa fa-arrow-down"></i></p>
+            <div class='blue-cover'></div>
+            <div class='touch-scroll'>
+                <div class='col-2 user-square' ng-click="signIn.toggleUser(user)" ng-repeat="user in kiosk.users">
+                    <div class='user-square-wrapper' ng-class={selected:user.selected}>
+                        <i class='fa icon-fixed-width selector' ng-class="{'fa-dot-circle-o':user.selected, 'fa-circle-o':!user.selected}"></i>
+                        <img class="user-picture" ng-src="{{user.PictureUrl}}"> {{user.DisplayName}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='col-1 button-submit-row'>
+        <button type="button" ng-click='signIn.trySendEmail()' class='btn btn-primary btn-center btn-kiosk btn-kiosk-orange btn-kiosk-large'>Submit <i class='fa fa-paper-plane'></i></button>
+    </div>
+</ng-form>
