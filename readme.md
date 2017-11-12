@@ -1,4 +1,4 @@
-# SPPP + PnP PowerShell Demo
+# SPPP + PnP PowerShell Demo. Custom SPA
 
 This sample project was generated using [generator-sppp](https://github.com/koltyakov/generator-sppp)
 
